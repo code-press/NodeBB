@@ -198,7 +198,8 @@ module.exports = function(app, data) {
 			secret: nconf.get('secret'),
 			key: 'express.sid',
 			cookie: {
-				maxAge: 1000 * 60 * 60 * 24 * parseInt(meta.configs.loginDays || 14, 10)
+				maxAge: 1000 * 60 * 60 * 24 * parseInt(meta.configs.loginDays || 14, 10),
+				domain: '.pressaprint.com'
 			}
 		}));
 
